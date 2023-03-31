@@ -7,14 +7,14 @@ const Blog = ({ blog }) => {
 		<div>
 			<img
 				className="w-full rounded-lg mb-8"
-				src="https://img.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg?size=626&ext=jpg&ga=GA1.2.801630698.1680198391&semt=sph"
+				src={blog.cover_img}
 				alt=""
 			/>
 			<div className="flex justify-between">
 				<div className="flex gap-4">
 					<img
 						className="rounded-[50%] w-12 h-12"
-						src={blog.cover_img}
+						src={blog.img}
 						alt=""
 					/>
 					<div>
