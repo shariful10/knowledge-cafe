@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
-const Blog = ({blog}) => {
+const Blog = ({ blog }) => {
 	return (
 		<div>
 			<img
@@ -14,34 +14,38 @@ const Blog = ({blog}) => {
 				<div className="flex gap-4">
 					<img
 						className="rounded-[50%] w-12 h-12"
-						src="https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?size=626&ext=jpg&ga=GA1.1.801630698.1680198391&semt=ais"
+						src={blog.cover_img}
 						alt=""
 					/>
 					<div>
-						<h5 className="text-2xl font-bold">Mr. Raju</h5>
+						<h5 className="text-2xl font-bold">{blog.name}</h5>
 						<p className="text-[16px] text-[#11111199] font-semibold">
-							Mar 14 (4 Days ago)
+							{blog.published}
 						</p>
 					</div>
 				</div>
 				<div className="flex justify-center items-center gap-2">
-					<p className="text-[20px] text-[#11111199]">05 min read</p>
+					<p className="text-[20px] text-[#11111199]">
+						{blog.time} min read
+					</p>
 					<FontAwesomeIcon icon={faBookmark} />
 				</div>
 			</div>
-			<h1 className="text-3xl md:text-[40px] font-bold md:pe-60 my-4">
-				How to get your first job as a self-taught programmer
+			<h1 className="text-3xl md:text-[40px] font-bold md:pe-60 my-6">
+				{blog.title}
 			</h1>
-			<div className="flex gap-4">
+			<div className="flex gap-4 mb-[21px] mt-4">
 				<p className="text-[20px] text-[#11111199]">#beginners</p>
 				<p className="text-[20px] text-[#11111199]">#programming</p>
 			</div>
 			<a
-				className="underline text-primary text-[20px] font-semibold mt-[21px] mb-10"
+				className="underline text-primary text-[20px] font-semiboldmb-10"
 				href="/">
 				Mark as read
 			</a>
-			<hr />
+			<div className="bg-primary">
+				<hr className="bg-black my-5" />
+			</div>
 		</div>
 	);
 };
