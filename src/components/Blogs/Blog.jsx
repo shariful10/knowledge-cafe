@@ -4,7 +4,7 @@ import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
 const Blog = ({ blog }) => {
 	return (
-		<div>
+		<div className="">
 			<img
 				className="w-full rounded-lg mb-8"
 				src={blog.cover_img}
@@ -18,7 +18,7 @@ const Blog = ({ blog }) => {
 						alt=""
 					/>
 					<div>
-						<h5 className="text-2xl font-bold">{blog.name}</h5>
+						<h5 className="text-[18px] md:text-2xl font-bold">{blog.name}</h5>
 						<p className="text-[16px] text-[#11111199] font-semibold">
 							{blog.published}
 						</p>
@@ -31,7 +31,7 @@ const Blog = ({ blog }) => {
 					<FontAwesomeIcon icon={faBookmark} />
 				</div>
 			</div>
-			<h1 className="text-3xl md:text-[40px] font-bold md:pe-60 my-6">
+			<h1 className="text-2xl md:text-[40px] font-bold md:pe-60 my-6">
 				{blog.title}
 			</h1>
 			<div className="flex gap-4 mb-[21px] mt-4">

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { data } from "autoprefixer";
 import Blog from "../Blogs/Blog";
 
 const Home = () => {
@@ -12,7 +11,7 @@ const Home = () => {
 	}, []);
 
 	return (
-		<div className="col-span-2 px-4">
+		<div className="col-span-2">
 			{
                 blogs.map((blog) => <Blog key={blog.id} blog={blog}></Blog>)
             }

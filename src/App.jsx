@@ -8,9 +8,11 @@ const App = () => {
 	return (
 		<div>
 			<Header />
-			<div className="container mx-auto grid md:grid-cols-3 gap-6">
-				<Home />
-				<SideCart />
+			<div className="px-4 md:px-0">
+				<div className="container md:mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+					<Home />
+					<SideCart />
+				</div>
 			</div>
 		</div>
 	);
