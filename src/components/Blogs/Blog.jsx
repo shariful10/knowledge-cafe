@@ -2,9 +2,9 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, handleReadTime }) => {
 	return (
-		<div className="">
+		<div>
 			<img
 				className="w-full rounded-lg mb-8"
 				src={blog.cover_img}
@@ -18,7 +18,9 @@ const Blog = ({ blog }) => {
 						alt=""
 					/>
 					<div>
-						<h5 className="text-[18px] md:text-2xl font-bold">{blog.name}</h5>
+						<h5 className="text-[18px] md:text-2xl font-bold">
+							{blog.name}
+						</h5>
 						<p className="text-[16px] text-[#11111199] font-semibold">
 							{blog.published}
 						</p>
@@ -31,18 +33,18 @@ const Blog = ({ blog }) => {
 					<FontAwesomeIcon icon={faBookmark} />
 				</div>
 			</div>
-			<h1 className="text-2xl md:text-[40px] font-bold md:pe-60 my-6">
+			<h1 className="text-2xl md:text-[40px] font-bold md:pe-60 my-6 leading-[50px]">
 				{blog.title}
 			</h1>
 			<div className="flex gap-4 mb-[21px] mt-4">
 				<p className="text-[20px] text-[#11111199]">#beginners</p>
 				<p className="text-[20px] text-[#11111199]">#programming</p>
 			</div>
-			<a
-				className="underline text-primary text-[20px] font-semiboldmb-10"
-				href="/">
+			<button
+				onClick={() => handleReadTime(blog.time)}
+				className="underline text-primary text-[20px] font-semiboldmb-10">
 				Mark as read
-			</a>
+			</button>
 			<hr className="bg-black my-5" />
 		</div>
 	);
