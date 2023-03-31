@@ -43,9 +43,7 @@ const Blog = ({ blog }) => {
 				href="/">
 				Mark as read
 			</a>
-			<div className="bg-primary">
-				<hr className="bg-black my-5" />
-			</div>
+			<hr className="bg-black my-5" />
 		</div>
 	);
 };
