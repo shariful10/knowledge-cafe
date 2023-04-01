@@ -27,8 +27,21 @@ const App = () => {
 
 	const handleBookmarkedBlog = (title) => {
 		const newTitle = [...bookmark, title];
-		setBookmark(newTitle);
-		console.log(newTitle.title);
+		if (newTitle) {
+			toast.error("🦄 Bookmark Already Exist!", {
+				position: "top-right",
+				autoClose: 5000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				theme: "light",
+			});
+			setBookmark(newTitle);
+		} else {
+			setBookmark(newTitle);
+		}
 	};
 
 	return (
