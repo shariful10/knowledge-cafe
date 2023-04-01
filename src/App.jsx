@@ -25,38 +25,10 @@ const App = () => {
 		}
 	};
 
-	const handleBookmarkedBlog = (length, title) => {
-		setCount(count + 1);
-		const blogs = { length, title };
-		let bookmark = [];
-		const previousBookmarked = JSON.parse(localStorage.getItem("bookmark"));
-
-		if (previousBookmarked) {
-			const existingBookmark = previousBookmarked.find(
-				(b) => b.title === title
-			);
-
-			if (existingBookmark) {
-				toast.error("🦄 Bookmark Already Exist!", {
-					position: "top-right",
-					autoClose: 5000,
-					hideProgressBar: false,
-					closeOnClick: true,
-					pauseOnHover: true,
-					draggable: true,
-					progress: undefined,
-					theme: "light",
-				});
-			} else {
-				bookmark.push(...previousBookmarked, blogs);
-				localStorage.setItem("bookmark", JSON.stringify(bookmark));
-				setBookmark(bookmark);
-			}
-		} else {
-			bookmark.push(blogs);
-			localStorage.setItem("bookmark", JSON.stringify(bookmark));
-			setBookmark(bookmark);
-		}
+	const handleBookmarkedBlog = (title) => {
+		const newTitle = [...bookmark, title];
+		setBookmark(newTitle);
+		console.log(newTitle.title);
 	};
 
 	return (
@@ -68,13 +40,14 @@ const App = () => {
 						handleReadTime={handleReadTime}
 						handleBookmarkedBlog={handleBookmarkedBlog}></Home>
 					<SideCart
-						count={count}
 						readTime={readTime}
 						bookmark={bookmark}></SideCart>
 					<ToastContainer />
 				</div>
 			</div>
-			<Card />
+			<div className="px-4 md:px-0">
+				<Card />
+			</div>
 		</div>
 	);
 };
