@@ -1,7 +1,7 @@
 import React from "react";
 
 const Bookmark = (props) => {
-    const bookmark = props.bookmark;
+    const {bookmark} = props;
 	return (
 		<div>
 			<h3 className="text-[18px] md:text-2xl font-bold">
