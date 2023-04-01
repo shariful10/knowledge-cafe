@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Bookmark from "../Bookmark/Bookmark";
 
 const SideCart = ({ readTime, bookmark }) => {
 	const [time, setTime] = useState(readTime);
@@ -34,12 +35,7 @@ const SideCart = ({ readTime, bookmark }) => {
 				</h3>
 			</div>
 			<div className="bg-[#1111110D] p-[30px] rounded-lg">
-				<h3 className="text-[18px] md:text-2xl font-bold">
-					Bookmarked Blogs : {bookmark.length}
-				</h3>
-				<h4 className="font-semibold text-[16px] md:text-[18px] p-[20px] bg-white rounded-lg my-4">
-					How to get your first job as a self-taught programmer
-				</h4>
+				<Bookmark bookmark={bookmark}></Bookmark>
 			</div>
 		</div>
 	);
