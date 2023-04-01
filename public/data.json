@@ -5,7 +5,6 @@
 		"time": 5,
 		"img": "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?size=626&ext=jpg&ga=GA1.1.801630698.1680198391&semt=ais",
 		"name": "Griffith Sargent",
-		"published": "Mar 14 (4 Days ago)",
 		"title": "How to get your first job as a self-taught programmer"
 	},
 	{
@@ -14,7 +13,6 @@
 		"time": 10,
 		"img": "https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?w=1380&t=st=1680250809~exp=1680251409~hmac=f9cc31ba50788f4e656b01d76aee9b0d08c8f1fa8b5ab61e421c0c59c1d0d9a4",
 		"name": "Angie Oneil",
-		"published": "Mar 15 (3 Days ago)",
 		"title": "Building scalable web applications with React"
 	},
 	{
@@ -23,7 +21,6 @@
 		"time": 12,
 		"img": "https://img.freepik.com/free-photo/cute-smiling-young-man-with-bristle-looking-satisfied_176420-18989.jpg?size=626&ext=jpg&ga=GA1.1.801630698.1680198391&semt=ais",
 		"name": "Gray Peterson",
-		"published": "Mar 12 (6 Days ago)",
 		"title": "What is React and how is it work?"
 	},
 	{
@@ -32,7 +29,6 @@
 		"time": 8,
 		"img": "https://img.freepik.com/free-photo/close-up-portrait-bearded-man_171337-4226.jpg?size=626&ext=jpg&ga=GA1.1.801630698.1680198391&semt=ais",
 		"name": "Ratliff Mccarthy",
-		"published": "Mar 16 (2 Days ago)",
 		"title": "Mastering React: Advanced tranning and best practice"
 	}
 ]

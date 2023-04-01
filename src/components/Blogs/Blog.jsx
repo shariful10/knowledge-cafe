@@ -22,7 +22,7 @@ const Blog = ({ blog, handleReadTime, handleBookmarkedBlog }) => {
 							{blog.name}
 						</h5>
 						<p className="text-[16px] text-[#11111199] font-semibold">
-							{blog.published}
+							Mar 14 (4 Days ago)
 						</p>
 					</div>
 				</div>
@@ -30,7 +30,10 @@ const Blog = ({ blog, handleReadTime, handleBookmarkedBlog }) => {
 					<p className="text-[20px] text-[#11111199]">
 						{blog.time} min read
 					</p>
-					<button onClick={() => handleBookmarkedBlog(blog.length, blog.title)}>
+					<button
+						onClick={() =>
+							handleBookmarkedBlog(blog.length, blog.title)
+						}>
 						<FontAwesomeIcon icon={faBookmark} />
 					</button>
 				</div>
