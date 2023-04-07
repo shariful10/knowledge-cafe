@@ -3,7 +3,6 @@ import Bookmark from "../Bookmark/Bookmark";
 
 const SideCart = ({ readTime, bookmark }) => {
 	const [time, setTime] = useState(readTime);
-	// const [bookmarked, setBookmarked] = useState(bookmark);
 
 	useEffect(() => {
 		const getReadTime = localStorage.getItem("readTime");
@@ -15,18 +14,6 @@ const SideCart = ({ readTime, bookmark }) => {
 		}
 	}, [readTime]);
 
-	// useEffect(() => {
-	// 	const getBookmark = JSON.parse(localStorage.getItem("bookmark"));
-
-	// 	if (getBookmark) {
-	// 		setBookmarked(getBookmark);
-	// 	} else {
-	// 		setBookmarked(
-	// 			"How to get your first job as a self-taught programmer"
-	// 		);
-	// 	}
-	// }, [bookmark]);
-
 	return (
 		<div className="mb-5">
 			<div>
@@ -35,7 +22,12 @@ const SideCart = ({ readTime, bookmark }) => {
 				</h3>
 			</div>
 			<div className="bg-[#1111110D] p-[30px] rounded-lg">
-				<Bookmark bookmark={bookmark}></Bookmark>
+				<h3 className="text-[18px] md:text-2xl font-bold">
+					Bookmarked Blogs : {bookmark.length}
+				</h3>
+				{bookmark.map((b) => (
+					<Bookmark b={b}></Bookmark>
+				))}
 			</div>
 		</div>
 	);

@@ -6,6 +6,7 @@ const Blog = (props) => {
 	const { handleReadTime } = props;
 	const {cover_img, img, name, time, title} = props.blog;
 	const handleBookmarkedBlog = props.handleBookmarkedBlog;
+	
 	return (
 		<div>
 			<img

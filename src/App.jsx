@@ -10,7 +10,6 @@ import Card from "./components/Card/Card";
 const App = () => {
 	const [readTime, setReadTime] = useState("");
 	const [bookmark, setBookmark] = useState([]);
-	const [count, setCount] = useState(0);
 
 	const handleReadTime = (time) => {
 		const previousReadTime = JSON.parse(localStorage.getItem("readTime"));
@@ -27,6 +26,7 @@ const App = () => {
 
 	const handleBookmarkedBlog = (title) => {
 		const newTitle = [...bookmark, title];
+
 		if (newTitle) {
 			toast.error("🦄 Bookmark Already Exist!", {
 				position: "top-right",
@@ -45,7 +45,7 @@ const App = () => {
 	};
 
 	return (
-		<div className="">
+		<div>
 			<Header />
 			<div className="px-4 md:px-0">
 				<div className="container md:mx-auto grid grid-cols-1 md:grid-cols-3 md:gap-6">
